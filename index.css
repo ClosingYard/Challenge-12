@@ -1,0 +1,111 @@
+*{margin: 0px;}
+
+
+.antwoord{
+    height: 15%;
+    width: 35%;
+    font-size: xx-large;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-style: solid;
+    border-color: black;
+    border-radius: 100px;
+}
+
+#antwoord1{
+    background-color: blue;
+    position: absolute;
+    left: 10%;
+    bottom: 7.5%;
+}
+
+#antwoord2{
+    background-color: chartreuse;
+    position: absolute;
+    left: 10%;
+    bottom: 25%;
+}
+
+#antwoord3{
+    background-color:   green;
+    position: absolute;
+    right: 10%;
+    bottom: 7.5%;
+}
+
+#antwoord4{
+    background-color: teal;
+    position: absolute;
+    right: 10%;
+    bottom: 25%;
+}
+
+.vragen{
+    background-color: grey;
+    width: 80%;
+    height: 500px;
+    position: relative;
+    left: 10%;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-style: solid;
+    border-color: black;
+    border-top: transparent;
+}
+
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(105, 101, 101);
+    font-size: xx-large;
+}
+
+#vraagtext{
+    padding-top: 15%;
+    font-size: xx-large;
+}
+
+.antwoordtext{
+    padding-top: 7.5%;
+    color: #FFF;
+}
+
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #ffd88f;
+}
+
+a {
+  color: #35a785;
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+
+ 
+
+
+
+ 
+
