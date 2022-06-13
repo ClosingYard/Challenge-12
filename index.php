@@ -20,7 +20,22 @@
         <a href="#"             class="antwoord" id="antwoord4" >
     </div>
 
+    <div class="timer">
+        <progress  id="progress" min="0" value="100" max="100"></progress>
+        <br>
+            <button id="button" onclick="move()">Click Me</button> 
+        </br>
+    </div>
      
+    <script>
+    function move() {
+        let progress = document.getElementById('progress');
+        if(progress.value != 0) {
+            progress.value = progress.value - (1/5)
+            setTimeout(move, 60)
+        }
+    }
+</script>
 </body>
 
 </html>
