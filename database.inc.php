@@ -1,18 +1,5 @@
 <?php
-    /*
-    * Use like this:Create a new file. In this file you start with
-    * <?php
-    *   require_once(databaseconnection.inc.php);
-    *   $sql = "SELECT * FROM tb_pokemon WHERE uuid = ?";
-    *   $data = array('Er459-GsoIu789-3564GSZXXH'); //Just an example
-    *   $result = getData($sql, $data);
-    *   foreach($result[0] as $key => $value) {
-            echo $value['name'];
-    *        //here some more code
-    *    }
-    * ?>
-    *
-    */
+   
     function dbConnect() {
         // We start with declaration and initialise some variables
         $dbhost		= "localhost";
