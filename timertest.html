@@ -1,22 +1,14 @@
 <html>
 <style>
-#myProgress {
-  width: 50%;
-  background-color:  #04AA6D;
-}
-
-#myBar {
-  width: 100%;
-  height: 30px;
-  background-color: #ddd;
-  margin: right;
+#progress{
+  
 }
 </style>
 <body>
 
 <h1>JavaScript Progress Bar</h1>
 
-<progress  id="progress" min="0" value="0" max="100"></progress>
+<progress  id="progress" min="0" value="100" max="100"></progress>
 
 <br>
 <button onclick="move()">Click Me</button> 
@@ -26,8 +18,8 @@
 
     function move() {
         let progress = document.getElementById('progress');
-        if(progress.value != 100) {
-            progress.value = progress.value + (1/5)
+        if(progress.value != 0) {
+            progress.value = progress.value - (1/5)
             setTimeout(move, 60)
         }
     }
