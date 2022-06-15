@@ -86,16 +86,25 @@
 
 /* De timer css */
 #progress{
-    width: 250px;
+    width: auto;
     border: solid black;
     border-radius: 10px;
-    
-    
+    background-color: rgb(105, 101, 101);
+    margin: 0;
+    position: fixed;
+    top: 7.5px;
+    right: 42%;
+    left: 42%;
   }
   
-  #button{
+  .button{
     width: 75px;
     margin-top: 10px;
+    bottom: 0px;
   }
     /* Timer */
 
+
+#vraag{
+    background-color: grey;
+}

@@ -22,25 +22,25 @@
 
 
 
-    <div class="header">30 Secondes</div>
+    <div class="header">30 Seconds <progress  id="progress" min="0" value="100" max="100"></progress></div>
     
     <div class="vragen">
-        
+          <p id="vraag" style='display: none'>HIER MOETEN DE VRAGEN INKOMEN</p>
+          <button class="button" type='button' onclick="toggleText()&move()">Click mij</button>
     </div>
-    <div >
+
+    <div>
         <a href="#"             class="antwoord" id="antwoord1" >
         <a href="#"             class="antwoord" id="antwoord2" >
         <a href="#"             class="antwoord" id="antwoord3" >
         <a href="#"             class="antwoord" id="antwoord4" >
     </div>
 
-    <div class="timer">
+    <!-- <div class="timer">
         <progress  id="progress" min="0" value="100" max="100"></progress>
-        <br>
-            <button id="button" onclick="move()">Click Me</button> 
-        </br>
-    </div>
+    </div> -->
      
+    
     <script>
     function move() {
         let progress = document.getElementById('progress');
@@ -49,6 +49,16 @@
             setTimeout(move, 60)
         }
     }
+
+
+    function toggleText() {
+            var text = document.getElementById("vraag");
+            if (text.style.display === "none") {
+              text.style.display = "block";
+            } else {
+              text.style.display = "none";
+            }
+          }
 </script>
 </body>
 
