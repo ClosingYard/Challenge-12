@@ -76,12 +76,21 @@
     color: #FFF;
 }
 
+.timer{
+    margin: 0;
+    position: fixed;
+    top: 0px;
+    right: 42%;
+    left: 42%;
+}
 
 /* De timer css */
 #progress{
     width: 250px;
     border: solid black;
     border-radius: 10px;
+    
+    
   }
   
   #button{
@@ -89,3 +98,4 @@
     margin-top: 10px;
   }
     /* Timer */
+
