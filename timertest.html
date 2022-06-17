@@ -15,12 +15,13 @@
     <div class="timer">
       <progress  id="progress" min="0" value="100" max="100"></progress>
       <br>
-          <button id="button" onclick="move(); toggleText();">Click Me</button> 
+          <button id="button" onclick="move(); toggleText();">Start</button> 
       </br>
     </div>    
 
     <div class="vragen">
-        
+      <p id="hoi" style='display: none'>hoi</p>
+      <p id="doei" style='display: none'>doei</p>  
     </div>
     
     <div >
@@ -28,6 +29,7 @@
         <a href="#"             class="antwoord" id="antwoord2" >
         <a href="#"             class="antwoord" id="antwoord3" >
         <a href="#"             class="antwoord" id="antwoord4" >
+          
     </div>
 
     
@@ -39,7 +41,7 @@
         document.querySelector('#button').disabled = true;
         if(progress.value != 0 && !reset) {
             progress.value = progress.value - (1/5)
-            setTimeout(move, 60)
+            setTimeout(move, 1) //ZET DE VALUE OP HET EINDE TERUG NAAR 60
             return;
         }
 
@@ -47,18 +49,18 @@
           document.querySelector('#button').disabled = false;
           reset = true;
           progress.value = 100;
+          var text = document.getElementById("hoi", "doei")
+          text.style.display = "none";
         }
         
     }
 
     
     function toggleText() {
-  var text = document.getElementById("antwoord1, antwoord2, antwoord3, antwoord4");
+  var text = document.getElementById("hoi", "doei");
   if (text.style.display === "none") {
     text.style.display = "block";
-  } else {
-    text.style.display = "none";
-  }
+  } 
 }
 </script>
 </body>
