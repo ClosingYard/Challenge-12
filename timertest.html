@@ -15,7 +15,7 @@
     <div class="timer">
       <progress  id="progress" min="0" value="100" max="100"></progress>
       <br>
-          <button id="button" onclick="move(100); toggleText();">Click Me</button> 
+          <button id="button" onclick="move(); toggleText();">Click Me</button> 
       </br>
     </div>    
 
@@ -34,17 +34,19 @@
      
     <script>
     function move() {
-        let progress = document.getElementById('progress')
+        let progress = document.getElementById('progress');
+        let reset = false;
         document.querySelector('#button').disabled = true;
-        if(progress.value != 0) {
+        if(progress.value != 0 && !reset) {
             progress.value = progress.value - (1/5)
             setTimeout(move, 60)
-            
-            
+            return;
         }
+
         if(progress.value == 0){
           document.querySelector('#button').disabled = false;
-
+          reset = true;
+          progress.value = 100;
         }
         
     }
