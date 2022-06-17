@@ -3,6 +3,20 @@
     background-color: #ffd88f;
 }
 
+@keyframes hover_animation{
+    0%   {border-radius: 100px ;}
+    10%  {border-radius: 25px  ; background-color: transparent 0,5;}
+    20%  {border-radius: 100px ;}
+    30%  {border-radius: 25px  ; background-color: transparent 0,5;}
+    40%  {border-radius: 100px ;}
+    50%  {border-radius: 25px  ; background-color: transparent 0,5;}
+    60%  {border-radius: 100px ;}
+    70%  {border-radius: 25px  ; background-color: transparent 0,5;}
+    80%  {border-radius: 100px ;}
+    90%  {border-radius: 25px  ; background-color: transparent 0,5;}
+    100% {border-radius: 100px ;}
+}
+
 .antwoord{
     height: 15%;
     width: 35%;
@@ -22,6 +36,11 @@
     position: absolute;
     left: 10%;
     bottom: 7.5%;
+    
+}
+
+#antwoord1 hover {
+    animation: hover_animation 15s infinite;
 }
 
 #antwoord2{
@@ -82,6 +101,7 @@
     top: 0px;
     right: 42%;
     left: 42%;
+    border-radius: 10px;
 }
 
 /* De timer css */
@@ -95,11 +115,16 @@
     top: 7.5px;
     right: 42%;
     left: 42%;
+    border-radius: 25px;
   }
+
+
+
   
   .button{
     width: 75px;
     margin-top: 10px;
+
     bottom: 0px;
   }
     /* Timer */
