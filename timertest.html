@@ -21,7 +21,7 @@
 
     <div class="vragen">
       <p id="hoi" style='display: none'>hoi</p>
-      <p id="doei" style='display: none'>doei</p>  
+      
     </div>
     
     <div >
@@ -31,7 +31,7 @@
         <a href="#"             class="antwoord" id="antwoord4" >
           
     </div>
-
+    <p id="doei" style='display: none'>doei</p>  
     
      
     <script>
@@ -45,11 +45,17 @@
             return;
         }
 
+        if (progress.value = 70 && 100) {
+          change.background="black"
+        }
+
         if(progress.value == 0){
           document.querySelector('#button').disabled = false;
           reset = true;
           progress.value = 100;
-          var text = document.getElementById("hoi", "doei")
+          var text = document.getElementById("hoi")
+          text.style.display = "none";
+          var text = document.getElementById("doei")
           text.style.display = "none";
         }
         
@@ -57,7 +63,11 @@
 
     
     function toggleText() {
-  var text = document.getElementById("hoi", "doei");
+  var text = document.getElementById("hoi");
+  if (text.style.display === "none") {
+    text.style.display = "block";
+  }
+  var text = document.getElementById("doei");
   if (text.style.display === "none") {
     text.style.display = "block";
   } 
