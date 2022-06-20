@@ -4,7 +4,7 @@ body {
 
 h1, 
 h2 {
-    color: #313740;
+    color: #5584cc;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -37,6 +37,7 @@ span {
 
 p {
     font-family: 'Archivo', sans-serif;
+    color: floralwhite;
 }
 
 #questionTitle {
@@ -47,6 +48,12 @@ p {
 #answerCheck {
     font-style: italic;
     color: #4D5159;
+}
+
+#start {
+    background-color:#222;
+    padding: 8%;
+    border-radius: 10px;
 }
 
 #everything {
@@ -213,3 +220,4 @@ font-size: 25px;
       background-position: 0 0;
     }
   }
+

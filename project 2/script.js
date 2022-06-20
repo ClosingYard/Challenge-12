@@ -6,8 +6,8 @@ const questions = [
         choices: 
         ["a. <! en dan enter>", 
         "b. <$ en dan TAB>", 
-        "c. <Je roept naar je computer>", 
-        "d. <Dit is niet mogelijk>"],
+        "c. Je roept naar je computer", 
+        "d. Dit is niet mogelijk"],
         answer: "a. <! en dan enter>"
     },
 
@@ -35,10 +35,10 @@ const questions = [
         question: "Wat gebeurt er als je een debug doet runnen?",
         choices: 
         ["a. Bugs worden opgespoort en verholpen", 
-        "b. Een enkele statement wordt gecontroleerd", 
-        "c. Je controleerd of er insecten in je computer zitten", 
+        "b. Een enkele statement wordt gecontroleert", 
+        "c. Je controleert of er insecten in je computer zitten", 
         "d. Onnodige functies worden verwijderd"],
-        answer: "a. Bugs worden opgespoort en verholpen"
+        answer: "b. Een enkele statement wordt gecontroleert"
     },
 
     {
@@ -92,7 +92,7 @@ const questions = [
     },
 
     {
-        question: "Hoe wordt een multi-line comment gemaakt?",
+        question: "In JavaScript, hoe wordt een multi-line comment gemaakt?",
         choices: 
         ["a. //...", 
         "b. /*...*/", 
@@ -144,11 +144,11 @@ const questions = [
     {
         question: "Wat zijn Methods?",
         choices: 
-        ["a. Een manier om Data-Types aan te spreken", 
+        ["a. Een manier om data types aan te spreken", 
         "b. Een manier om Strings aan te spreken", 
         "c. Een manier om een som te berekenen", 
         "d. Een manier om Symbols te bewerken"],
-        answer: "a. Een manier om Data-types aan te spreken"
+        answer: "a. Een manier om data types aan te spreken"
     },
 
     // Non-Technische vragen
@@ -199,7 +199,7 @@ const questions = [
         "b. Een presentatie", 
         "c. Een LEAN bord maken", 
         "d. Gamen"],
-        answer: "Een LEAN bord maken"
+        answer: "c. Een LEAN bord maken"
     },    
     
     {
@@ -273,33 +273,33 @@ const questions = [
     },    
     
     {
-        question: "",
+        question: "Er is dit jaar een uitje geweest voor de hele klas, waar zijn wij naar toe gegaan?",
         choices: 
-        ["a. ", 
-        "b. ", 
-        "c. ", 
-        "d. "],
-        answer: ""
+        ["a. Computer Museum Helmond", 
+        "b. Primark Eindhoven", 
+        "c. De McDonalds", 
+        "d. Naar huis"],
+        answer: "a. Computer Museum Helmond"
     },    
     
     {
-        question: "",
+        question: "Als je je verslapen hebt, wat moet je dan doen zodra je op school bent?",
         choices: 
-        ["a. ", 
-        "b. ", 
-        "c. ", 
-        "d. "],
-        answer: ""
+        ["a. Gewoon gaan zitten en niets zeggen", 
+        "b. Je mentor zoeken en je melden", 
+        "c. Je zoekt je mentor en meldt je, en dan mail je Mr.Portz met de bendercode", 
+        "d. Je gaat niet en blijft thuis"],
+        answer: "c. Je zoekt je mentor en meldt je, en dan mail je Mr.Portz met de bendercode"
     },    
     
     {
-        question: "",
+        question: "Tijdens ons schooljaar hebben wij een dag waarop we thuis les hebben, hiervoor gebruiken wij ____ als programma om de les te volgen",
         choices: 
-        ["a. ", 
-        "b. ", 
-        "c. ", 
-        "d. "],
-        answer: ""
+        ["a. Skype", 
+        "b. Facebook Messenger", 
+        "c. Discord", 
+        "d. Zoom"],
+        answer: "d. Zoom"
     },
 ];
 
@@ -379,12 +379,13 @@ function newQuiz() {
     showQuiz();
 };
 
-// console.log(questions[questionIndex].question);
+console.log(questions[questionIndex].question);
 // console.log(questions[questionIndex].choices);
 
 // then presented with questions and choices
 function showQuiz() {
     nextQuestion();
+    
 }
 
 function nextQuestion() {
@@ -543,3 +544,4 @@ clearHighScoreBtn.addEventListener("click", function(){
     listOfHighScores.innerHTML = "High Scores Cleared!";
     listOfHighScores.setAttribute("style", "font-family: 'Archivo', sans-serif; font-style: italic;")
 });
+
