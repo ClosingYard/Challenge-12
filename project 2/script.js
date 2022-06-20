@@ -265,11 +265,11 @@ const questions = [
     {
         question: "Welke stelling is correct?",
         choices: 
-        ["a. Docenten geven direct de benderal code, zonder het grappig te vinden om nep codes te roepen", 
+        ["a. Elke morgen vindt onbewust een stoelendans plaats voordat ik ga zitten", 
         "b. Bij high-end gamen denk je aan een Apple computer", 
         "c. Als ik zeg dat ik dub Anime kijk, dan krijg ik geen klap", 
-        "d. Elke morgen vindt onbewust een stoelendans plaats voordat ik ga zitten"],
-        answer: "d. Elke morgen vindt onbewust een stoelendans plaats voordat ik ga zitten"
+        "d. Docenten geven direct de benderal code, zonder het grappig te vinden om nep codes te roepen"],
+        answer: "a. Elke morgen vindt onbewust een stoelendans plaats voordat ik ga zitten"
     },    
     
     {
@@ -318,6 +318,7 @@ var choiceB = document.getElementById("btn1");
 var choiceC = document.getElementById("btn2");
 var choiceD = document.getElementById("btn3");
 var answerCheck = document.getElementById("answerCheck");
+var answerCheck2 = document.getElementById("answerCheck");
 
 var summary = document.getElementById("summary");
 var submitInitialBtn = document.getElementById("submitInitialBtn");
@@ -334,9 +335,11 @@ var listOfHighScores = document.getElementById("listOfHighScores");
 
 // define other variables
 var correctAns = 0;
+var totalquestions = 0;
 var questionNum = 0;
 var scoreResult;
 var questionIndex = 0;
+
 
 /**
  * FUNCTIONS
@@ -345,7 +348,7 @@ var questionIndex = 0;
 // WHEN I click the start button, timer starts
 var totalTime = 151;
 function newQuiz() {
-    questionIndex = 0;
+    questionIndex = ranNums.next().value;;
     totalTime = 30;
     timeLeft.textContent = totalTime;
     initialInput.textContent = "";
@@ -366,10 +369,10 @@ function newQuiz() {
             }
         }
         if(totalTime <=10 && totalTime >=0 ) {
-            document.getElementById("timer").style.backgroundColor = "red" 
+            document.getElementById("timer").style.backgroundColor = "rgb(150, 16, 16)" 
         }
         if(totalTime <=20 && totalTime >=10  ) {
-            document.getElementById("timer").style.backgroundColor = "yellow" 
+            document.getElementById("timer").style.backgroundColor = "rgb(131, 131, 2)" 
         }
         if(totalTime <=30 && totalTime >=20 ) {
             document.getElementById("timer").style.backgroundColor = "green" 
@@ -379,8 +382,9 @@ function newQuiz() {
     showQuiz();
 };
 
-console.log(questions[questionIndex].question);
+// console.log(questions[questionIndex].question);
 // console.log(questions[questionIndex].choices);
+console.log(questionIndex)
 
 // then presented with questions and choices
 function showQuiz() {
@@ -388,16 +392,33 @@ function showQuiz() {
     
 }
 
+function* shuffle(array) {
+
+    var i = array.length;
+
+    while (i--) {
+        yield array.splice(Math.floor(Math.random() * (i+1)), 1)[0];
+    }
+
+}
+var ranNums = shuffle([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]);
+
+
+  
+
 function nextQuestion() {
     questionTitle.textContent = questions[questionIndex].question;
     choiceA.textContent = questions[questionIndex].choices[0];
     choiceB.textContent = questions[questionIndex].choices[1];
     choiceC.textContent = questions[questionIndex].choices[2];
     choiceD.textContent = questions[questionIndex].choices[3];
+    console.log(questionIndex)
+    console.log(nextQuestion)
 }
 
 // after question is answered, show if correct or wrong
 function checkAnswer(answer) {
+    
 
     var lineBreak = document.getElementById("lineBreak");
     lineBreak.style.display = "block";
@@ -406,22 +427,29 @@ function checkAnswer(answer) {
     if (questions[questionIndex].answer === questions[questionIndex].choices[answer]) {
         // correct answer, add 1 score to final score
         correctAns++;
+        totalquestions++;
         totalTime += 5;
 
         // console.log(correctAns);
-        answerCheck.textContent = "Correct!";
+        answerCheck.textContent = " that is the correct answer!";
     } else {
+        totalquestions++;
         // wrong answer, deduct 10 second from timer
         timeLeft.textContent = totalTime;
-        answerCheck.textContent = "Wrong! The correct answer is: " + questions[questionIndex].answer;
+        answerCheck.textContent = "the question was:  " + questions[questionIndex].question;
+        answerCheck2.textContent =  "Nope! Het juiste antwoord is: " + questions[questionIndex].answer;
     }
 
-    questionIndex++;
+    questionIndex = ranNums.next().value;
     // repeat with the rest of questions 
     if (questionIndex < questions.length) {
         nextQuestion();
     } else {
         // if no more question, run game over function
+        gameOver();
+    }
+
+    if (totalquestions == 15 ){
         gameOver();
     }
 }
