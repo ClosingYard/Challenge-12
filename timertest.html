@@ -15,13 +15,21 @@
     <div class="timer">
       <progress  id="progress" min="0" value="100" max="100"></progress>
       <br>
+<<<<<<< Updated upstream
           <button id="button" onclick="move(); toggleText();">Start</button> 
+=======
+          <button id="button" onclick="move(); toggleText();">Click Me</button> 
+>>>>>>> Stashed changes
       <br>
     </div>    
 
     <div class="vragen">
+<<<<<<< Updated upstream
       <p id="hoi" style='display: none'>hoi</p>
       
+=======
+        
+>>>>>>> Stashed changes
     </div>
     
     <div >
@@ -41,7 +49,7 @@
         document.querySelector('#button').disabled = true;
         if(progress.value != 0 && !reset) {
             progress.value = progress.value - (1/5)
-            setTimeout(move, 1) //ZET DE VALUE OP HET EINDE TERUG NAAR 60
+            setTimeout(move, 60)
             return;
         }
 
@@ -63,14 +71,20 @@
 
     
     function toggleText() {
+<<<<<<< Updated upstream
   var text = document.getElementById("hoi");
   if (text.style.display === "none") {
     text.style.display = "block";
   }
   var text = document.getElementById("doei");
+=======
+  var text = document.getElementById("antwoord1, antwoord2, antwoord3, antwoord4");
+>>>>>>> Stashed changes
   if (text.style.display === "none") {
     text.style.display = "block";
-  } 
+  } else {
+    text.style.display = "none";
+  }
 }
 </script>
 </body>
