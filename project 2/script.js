@@ -1,65 +1,306 @@
  // Define a set of questions
 const questions = [
+    // Technische vragen
     {
-        question: "Inside which HTML element do we put the JavaScript?",
-        choices: ["a. <js>", "b. <javascript>", "c. <scripting>", "d. <script>"],
-        answer: "d. <script>"
+        question: "In Visual Studio Code, Hoe roep je een preset op van HTML?",
+        choices: 
+        ["a. <! en dan enter>", 
+        "b. <$ en dan TAB>", 
+        "c. <Je roept naar je computer>", 
+        "d. <Dit is niet mogelijk>"],
+        answer: "a. <! en dan enter>"
     },
+
     {
-        question: "String values must be enclosed within _____ when being assigned to variables.",
-        choices: ["a. commas", "b. curly brackets", "c. quotes", "d. parenthesis"],
-        answer: "c. quotes"
+        question: "Hoe benoem je een CSS file?",
+        choices: 
+        ["a. index.css", 
+        "b. stylesheet.php", 
+        "c. stylesheet.css", 
+        "d. De naam maakt niet uit"],
+        answer: "c. stylesheet.css"
     },
+
     {
-        question: "Arrays in JavaScript can be used to store _____.",
-        choices: ["a. numbers and strings", "b. other arrays", "c. booleans", "d. all of the above"],
-        answer: "b. other arrays"
+        question: "Een programmeer taal is ___",
+        choices: 
+        ["a. Een taal die Spanjaarden begrijpen", 
+        "b. Een taal die alle Nederlanders begrijpen", 
+        "c. Een taal die computers begrijpen", 
+        "d. Een taal met alleen maar enen en nullen"],
+        answer: "c. Een taal die computers begrijpen"
     },
+
     {
-        question: "Commonly used data types DO NOT include:",
-        choices: ["a. strings", "b. booleans", "c. alerts", "d. numbers"],
-        answer: "c. alerts"
+        question: "Wat gebeurt er als je een debug doet runnen?",
+        choices: 
+        ["a. Bugs worden opgespoort en verholpen", 
+        "b. Een enkele statement wordt gecontroleerd", 
+        "c. Je controleerd of er insecten in je computer zitten", 
+        "d. Onnodige functies worden verwijderd"],
+        answer: "a. Bugs worden opgespoort en verholpen"
     },
+
     {
-        question: "How do you create a function in JavaScript",
-        choices: ["a. function = myFunction()", "b. function myFunction()", "c. function:myFunction()", "d. createMyFunction()"],
-        answer: "b. function myFunction()"
+        question: "Welke van de onderstaande antwoorden is een Data-Type?",
+        choices: 
+        ["a. Modulo", 
+        "b. Null", 
+        "c. VAR", 
+        "d. DDOS"],
+        answer: "b. Null"
     },
+
     {
-        question: "How do you call a function named myFunction?",
-        choices: ["a. call myFunction()", "b. call function myFunction()", "c. myFunction()", "d. call myFunction"],
-        answer: "c. myFunctions()"
+        question: "In JavaScript, hoe print je iets op de console?",
+        choices: 
+        ["a. Debug", 
+        "b. console.log", 
+        "c. Print Screen", 
+        "d. log.console"],
+        answer: "b. console.log"
     },
+
     {
-        question: "To see if two variables are equal in an if / else statement you would use ____.",
-        choices: ["a. =", "b. ==", "c. 'equals'", "d. !="],
-        answer: "b. =="
+        question: "Hoe vaak kun je een ID dezelfde naam geven?",
+        choices: 
+        ["a. Twee keer", 
+        "b. Er is geen limiet", 
+        "c. Tien keer", 
+        "d. Een keer"],
+        answer: "d. Een keer"
     },
+
     {
-        question: "The first index of an array is ____.",
-        choices: ["a. 0", "b. 1", "c. 8", "d. any"],
-        answer: "a. 0"
+        question: "Hoe vaak kun je een class gebruiken met dezelfde naam?",
+        choices: 
+        ["a. Geen enkele keer", 
+        "b. Honderd keer", 
+        "c. Er is geen limiet", 
+        "d. Twee keer"],
+        answer: "c. Er is geen limiet"
     },
+
     {
-        question: "Who invented JavaScript?",
-        choices: ["a. Douglas Crockford", "b. Sheryl Sandberg", "c. Brendan Eich", "d. Ben Javascript"],
-        answer: "c. Brendan Eich"
+        question: "In HTML, hoeveel soorten headings kun je maken?",
+        choices: 
+        ["a. Vier", 
+        "b. Vijf", 
+        "c. Twaalf", 
+        "d. Zes"],
+        answer: "d. Zes"
     },
+
     {
-        question: "How to write an IF statement in JavaScript?",
-        choices: ["a. if i == 5 then", "b. if i = 5 then", "c. if(i == 5)", "d. if i = 5"],
-        answer: "c. if(i == 5)"
+        question: "Hoe wordt een multi-line comment gemaakt?",
+        choices: 
+        ["a. //...", 
+        "b. /*...*/", 
+        "c. <*...*>", 
+        "d. //*...*//"],
+        answer: "b. /*...*/"
     },
+
     {
-        question: "How do you add a comment in a JavaScript?",
-        choices: ["a. //This is a comment", "b. <!--This is a comment-->", "c. 'This is a comment", "d. * This is a comment *"],
-        answer: "a. //This is a comment"
+        question: "Met welke property kun je de lengte van je string achterhalen?",
+        choices: 
+        ["a. Prototype", 
+        "b. Constructor", 
+        "c. Length", 
+        "d. Width"],
+        answer: "c. Length"
     },
+
     {
-        question: "Which event occurs when the user clicks on an HTML element?",
-        choices: ["a. onclick", "b. onchange", "c. onmouseover", "d. onmouseclick"],
-        answer: "a. onclick"
-    }
+        question: "Waar staat USR voor?",
+        choices: 
+        ["a. User", 
+        "b. Undefined Software Rating", 
+        "c. United States Resident", 
+        "d. Dit betekent niets"],
+        answer: "a. User"
+    },
+
+    {
+        question: "Hoe noem je een werkplek in Github?",
+        choices: 
+        ["a. GitZone", 
+        "b. Git", 
+        "c. Git Work Group", 
+        "d. Repository"],
+        answer: "d. Repository"
+    },
+
+    {
+        question: "Welk programma gebruikt school voor het ontwerpen van een project?",
+        choices: 
+        ["a. Visual Studio", 
+        "b. Figma", 
+        "c. Adobe Illustrator", 
+        "d. NicePage"],
+        answer: "b. Figma"
+    },
+
+    {
+        question: "Wat zijn Methods?",
+        choices: 
+        ["a. Een manier om Data-Types aan te spreken", 
+        "b. Een manier om Strings aan te spreken", 
+        "c. Een manier om een som te berekenen", 
+        "d. Een manier om Symbols te bewerken"],
+        answer: "a. Een manier om Data-types aan te spreken"
+    },
+
+    // Non-Technische vragen
+    {
+        question: "Uit hoeveel letters bestaat een Benderal code?",
+        choices: 
+        ["a. Twee", 
+        "b. Wat is een benderal code?", 
+        "c. Vier", 
+        "d. Geen"],
+        answer: "d. Geen"
+    },    
+    
+    {
+        question: "Hoe vaak per week moeten wij vast naar Maastricht?",
+        choices: 
+        ["a. Iedere dag", 
+        "b. Nooit", 
+        "c. Twee dagen", 
+        "d. Drie dagen"],
+        answer: "c. Twee dagen"
+    },    
+    
+    {
+        question: "Welke docent praat teveel?",
+        choices: 
+        ["a. Mr.Steens", 
+        "b. Mr.Backus", 
+        "c. Mvr.Winckers", 
+        "d. Ze praten allemaal teveel"],
+        answer: "d. Ze praten allemaal teveel"
+    },    
+    
+    {
+        question: "Waar krijgen wij onze opdrachten in uitgezet?",
+        choices: 
+        ["a. Teams", 
+        "b. Padlet", 
+        "c. School Mail", 
+        "d. Trello"],
+        answer: "b. Padlet"
+    },    
+    
+    {
+        question: "Wat moeten wij aan het begin van een challenge doen?",
+        choices: 
+        ["a. Programmeren", 
+        "b. Een presentatie", 
+        "c. Een LEAN bord maken", 
+        "d. Gamen"],
+        answer: "Een LEAN bord maken"
+    },    
+    
+    {
+        question: "Hoeveel procent van ICT studenten worden tijdens hun studie benaderd door bedrijven?",
+        choices: 
+        ["a. 70%", 
+        "b. 48%", 
+        "c. 24%", 
+        "d. 2%"],
+        answer: "b. 48%"
+    },    
+    
+    {
+        question: "Hoeveel pauzes krijgen wij in een enkele dag?",
+        choices: 
+        ["a. Drie", 
+        "b. Vier", 
+        "c. Een", 
+        "d. Twee"],
+        answer: "a. Drie"
+    },    
+    
+    {
+        question: "Wat doen studenten het liefste als ze moeten werken?",
+        choices: 
+        ["a. Werken", 
+        "b. Gamen", 
+        "c. Slapen", 
+        "d. Niksen"],
+        answer: "b. Gamen"
+    },    
+    
+    {
+        question: "Welke school locatie is beter?",
+        choices: 
+        ["a. Maastricht", 
+        "b. Heerlen", 
+        "c. Sittard", 
+        "d. Beek"],
+        answer: "c. Sittard"
+    },    
+    
+    {
+        question: "Wat kan school doen tegen drinken in het lokaal?",
+        choices: 
+        ["a. Helemaal niets", 
+        "b. Verbieden", 
+        "c. Zelf ook drinken", 
+        "d. Blikjes verbieden"],
+        answer: "d. Blikjes verbieden"
+    },    
+    
+    {
+        question: "Iemand zegt dat hij een Pro-builder is in Fortnite, Hoe reageert de klas?",
+        choices: 
+        ["a. Respect man", 
+        "b. We spelen geen Fortnite", 
+        "c. Welke skins heb je?", 
+        "d. F**k you"],
+        answer: "d. F**k you"
+    },    
+    
+    {
+        question: "Welke stelling is correct?",
+        choices: 
+        ["a. Docenten geven direct de benderal code, zonder het grappig te vinden om nep codes te roepen", 
+        "b. Bij high-end gamen denk je aan een Apple computer", 
+        "c. Als ik zeg dat ik dub Anime kijk, dan krijg ik geen klap", 
+        "d. Elke morgen vindt onbewust een stoelendans plaats voordat ik ga zitten"],
+        answer: "d. Elke morgen vindt onbewust een stoelendans plaats voordat ik ga zitten"
+    },    
+    
+    {
+        question: "",
+        choices: 
+        ["a. ", 
+        "b. ", 
+        "c. ", 
+        "d. "],
+        answer: ""
+    },    
+    
+    {
+        question: "",
+        choices: 
+        ["a. ", 
+        "b. ", 
+        "c. ", 
+        "d. "],
+        answer: ""
+    },    
+    
+    {
+        question: "",
+        choices: 
+        ["a. ", 
+        "b. ", 
+        "c. ", 
+        "d. "],
+        answer: ""
+    },
 ];
 
 // grab references to elements
@@ -105,7 +346,7 @@ var questionIndex = 0;
 var totalTime = 151;
 function newQuiz() {
     questionIndex = 0;
-    totalTime = 150;
+    totalTime = 30;
     timeLeft.textContent = totalTime;
     initialInput.textContent = "";
 
@@ -121,7 +362,17 @@ function newQuiz() {
             clearInterval(startTimer);
             if (questionIndex < questions.length - 1) {
                 gameOver();
+                // nextQuestion();
             }
+        }
+        if(totalTime <=10 && totalTime >=0 ) {
+            document.getElementById("timer").style.backgroundColor = "red" 
+        }
+        if(totalTime <=20 && totalTime >=10  ) {
+            document.getElementById("timer").style.backgroundColor = "yellow" 
+        }
+        if(totalTime <=30 && totalTime >=20 ) {
+            document.getElementById("timer").style.backgroundColor = "green" 
         }
     },1000);
 
@@ -154,11 +405,12 @@ function checkAnswer(answer) {
     if (questions[questionIndex].answer === questions[questionIndex].choices[answer]) {
         // correct answer, add 1 score to final score
         correctAns++;
+        totalTime += 5;
+
         // console.log(correctAns);
         answerCheck.textContent = "Correct!";
     } else {
         // wrong answer, deduct 10 second from timer
-        totalTime -= 10;
         timeLeft.textContent = totalTime;
         answerCheck.textContent = "Wrong! The correct answer is: " + questions[questionIndex].answer;
     }

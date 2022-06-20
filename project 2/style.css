@@ -8,6 +8,8 @@ h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
+
+
 a {
     color: #3290A6;
     font-family: 'Archivo', sans-serif;
@@ -46,3 +48,40 @@ p {
     font-style: italic;
     color: #4D5159;
 }
+
+#everything {
+    align-content: center;
+    align-self: center;
+}
+
+#High_scores{
+    border-style: solid;
+    text-align: center;
+    padding: 1%;
+    margin: 1% 0%;
+    border: thick solid grey;
+    border-radius: 10px;
+    color: black;
+    background-color: #606e7c;
+}
+
+#High_scores a{
+color: black;
+font-size: 25px;
+}
+
+#timer {
+    float: right;
+    font-size: xx-large;
+    background-color: green;
+    border-style: groove;
+    border-color: black;
+    border-radius: 20px;
+    padding: 1%;
+}
+
+#start-quiz-button{
+    display: inline-block;
+}
+
+
